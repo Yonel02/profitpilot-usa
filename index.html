@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free profit calculators and practical tools for resellers and small businesses in the USA.">
+<title>ProfitPilot USA | Smarter Tools. Better Profits.</title>
+<style>
+:root{--navy:#10243a;--blue:#2563eb;--mint:#13b89a;--ink:#172337;--muted:#64748b;--bg:#f4f7fb;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:var(--navy);color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-size:1.25rem;font-weight:800;letter-spacing:.2px}.brand span{color:#4ee0c1}
+button, input{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;font-weight:700}
+.lang{background:#fff;color:var(--navy)}.hero{padding:58px 5%;background:linear-gradient(120deg,#10243a,#174b70);color:white}
+.hero-inner{max-width:1050px;margin:auto}.eyebrow{color:#71e5cc;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:.78rem}
+h1{font-size:clamp(2.1rem,6vw,3.8rem);line-height:1.08;margin:12px 0}.hero p{max-width:650px;color:#dbeafe;font-size:1.1rem}
+.wrap{max-width:1050px;margin:0 auto;padding:34px 5%}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.card{background:white;border:1px solid #e4eaf2;border-radius:18px;padding:24px;box-shadow:0 8px 26px #10243a0b}
+h2{margin:0 0 8px;font-size:1.45rem}.muted{color:var(--muted);margin-top:0}
+label{display:block;font-weight:650;font-size:.92rem;margin:14px 0 6px}
+input{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;background:white;color:var(--ink)}
+.result{background:#edfdf8;border:1px solid #b9f1e2;border-radius:14px;padding:18px;margin-top:16px}
+.profit{font-size:2rem;font-weight:850;color:#087f68}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.stat{background:#f7f9fc;padding:13px;border-radius:12px}.stat small{display:block;color:var(--muted)}.stat strong{font-size:1.1rem}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}.feature{background:#fff;padding:18px;border:1px solid #e4eaf2;border-radius:14px}
+.feature b{display:block;margin-bottom:6px}.pill{display:inline-block;background:#eaf2ff;color:#1d4ed8;padding:4px 9px;border-radius:30px;font-size:.75rem;font-weight:800}
+footer{text-align:center;color:var(--muted);padding:28px 5%;font-size:.9rem}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.features{grid-template-columns:1fr}.hero{padding:42px 5%}}
+</style>
+</head>
+<body>
+<header><div class="brand">ProfitPilot <span>USA</span></div><button class="lang" id="language" type="button">Español</button></header>
+<section class="hero"><div class="hero-inner">
+<div class="eyebrow" data-en="Free tools for resellers & small businesses" data-es="Herramientas gratis para revendedores y pequeños negocios">Free tools for resellers & small businesses</div>
+<h1 data-en="Smarter tools.<br>Better profits." data-es="Herramientas inteligentes.<br>Mejores ganancias.">Smarter tools.<br>Better profits.</h1>
+<p data-en="Know your numbers before you buy. Calculate costs, fees and potential profit with simple tools built for the US marketplace." data-es="Conoce tus números antes de comprar. Calcula costos, comisiones y ganancias potenciales con herramientas sencillas para vender en Estados Unidos.">Know your numbers before you buy. Calculate costs, fees and potential profit with simple tools built for the US marketplace.</p>
+</div></section>
+<main class="wrap">
+<div class="grid">
+<section class="card">
+<span class="pill" data-en="FREE CALCULATOR" data-es="CALCULADORA GRATIS">FREE CALCULATOR</span>
+<h2 data-en="Reseller profit calculator" data-es="Calculadora de ganancias para revendedores">Reseller profit calculator</h2>
+<p class="muted" data-en="Enter your expected sale and costs. Adjust marketplace fees to match your selling platform." data-es="Introduce el precio de venta y tus costos. Ajusta la comisión según la plataforma donde vendas.">Enter your expected sale and costs. Adjust marketplace fees to match your selling platform.</p>
+<label for="sale" data-en="Selling price ($)" data-es="Precio de venta ($)">Selling price ($)</label><input id="sale" type="number" min="0" step=".01" value="35">
+<label for="cost" data-en="Product cost ($)" data-es="Costo del producto ($)">Product cost ($)</label><input id="cost" type="number" min="0" step=".01" value="12">
+<label for="ship" data-en="Shipping & packaging ($)" data-es="Envío y empaque ($)">Shipping & packaging ($)</label><input id="ship" type="number" min="0" step=".01" value="5">
+<label for="fee" data-en="Marketplace/payment fees (%)" data-es="Comisiones de plataforma/pago (%)">Marketplace/payment fees (%)</label><input id="fee" type="number" min="0" max="100" step=".1" value="13">
+<div class="result"><div data-en="Estimated net profit" data-es="Ganancia neta estimada">Estimated net profit</div><div class="profit" id="profit">$13.45</div><div class="stats"><div class="stat"><small data-en="Profit margin" data-es="Margen de ganancia">Profit margin</small><strong id="margin">38.4%</strong></div><div class="stat"><small data-en="Fees estimate" data-es="Comisiones estimadas">Fees estimate</small><strong id="fees">$4.55</strong></div></div></div>
+</section>
+<aside class="card"><h2 data-en="Build your business with clarity" data-es="Haz crecer tu negocio con claridad">Build your business with clarity</h2>
+<p class="muted" data-en="ProfitPilot USA is being built to help everyday sellers make more informed decisions." data-es="ProfitPilot USA se está creando para ayudar a vendedores a tomar decisiones mejor informadas.">ProfitPilot USA is being built to help everyday sellers make more informed decisions.</p>
+<div class="features" style="grid-template-columns:1fr">
+<div class="feature"><b>🧮 <span data-en="Know your profit" data-es="Conoce tu ganancia">Know your profit</span></b><span class="muted" data-en="Estimate what remains after costs and fees." data-es="Calcula lo que queda después de costos y comisiones.">Estimate what remains after costs and fees.</span></div>
+<div class="feature"><b>📦 <span data-en="Sell smarter" data-es="Vende con estrategia">Sell smarter</span></b><span class="muted" data-en="Plan purchases using real numbers." data-es="Planifica tus compras usando números reales.">Plan purchases using real numbers.</span></div>
+<div class="feature"><b>📈 <span data-en="Grow step by step" data-es="Crece paso a paso">Grow step by step</span></b><span class="muted" data-en="More free calculators and guides are planned." data-es="Próximamente habrá más calculadoras y guías gratuitas.">More free calculators and guides are planned.</span></div>
+</div></aside>
+</div>
+</main>
+<footer>© <span id="year"></span> ProfitPilot USA · <span data-en="Independent educational tools. Estimates only; verify actual marketplace fees." data-es="Herramientas educativas independientes. Son estimaciones; verifica las comisiones reales de cada plataforma.">Independent educational tools. Estimates only; verify actual marketplace fees.</span></footer>
+<script>
+const ids=['sale','cost','ship','fee'];
+function money(n){return n.toLocaleString('en-US',{style:'currency',currency:'USD'});}
+function calc(){const sale=Math.max(0,+document.getElementById('sale').value||0),cost=Math.max(0,+document.getElementById('cost').value||0),ship=Math.max(0,+document.getElementById('ship').value||0),fee=Math.min(100,Math.max(0,+document.getElementById('fee').value||0));const fees=sale*fee/100,profit=sale-cost-ship-fees;document.getElementById('profit').textContent=money(profit);document.getElementById('margin').textContent=(sale?profit/sale*100:0).toFixed(1)+'%';document.getElementById('fees').textContent=money(fees);document.getElementById('profit').style.color=profit<0?'#b42318':'#087f68';}
+ids.forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();document.getElementById('year').textContent=new Date().getFullYear();
+let lang='en';document.getElementById('language').addEventListener('click',()=>{lang=lang==='en'?'es':'en';document.documentElement.lang=lang;document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.dataset[lang]);document.getElementById('language').textContent=lang==='en'?'Español':'English';});
+</script>
+</body></html>
