@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free reseller profit calculators, product research guides and practical tools for small businesses in the USA.">
+<title>ProfitPilot USA | Smarter Tools. Better Profits.</title>
+<style>
+:root{--navy:#101e36;--navy2:#172b4d;--green:#25c58a;--ink:#182235;--muted:#64748b;--bg:#f4f7fb;--line:#e4eaf1;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{background:var(--navy);color:white;padding:16px max(5vw,20px);display:flex;align-items:center;justify-content:space-between;gap:20px;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.25rem;letter-spacing:-.4px}.logo{background:var(--green);color:var(--navy);width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-weight:900;font-size:23px}
+nav{display:flex;gap:20px;align-items:center}nav a{color:#d8e4f2;text-decoration:none;font-size:.92rem}nav a:hover{color:var(--green)}
+button,.btn{border:0;border-radius:10px;padding:11px 16px;background:var(--green);color:#082b25;font-weight:750;cursor:pointer}
+.lang{background:#263a58;color:white;border:1px solid #49617f}
+.hero{background:linear-gradient(120deg,var(--navy),#203d60);color:white;padding:70px max(5vw,20px) 64px}
+.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+.eyebrow{color:#75e3ba;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.76rem}
+h1{font-size:clamp(2.3rem,5vw,4.25rem);line-height:1.04;letter-spacing:-2px;margin:14px 0}
+.hero p{color:#d2deec;max-width:610px;font-size:1.08rem}
+.hero-card{background:white;color:var(--ink);padding:24px;border-radius:18px;box-shadow:0 20px 50px #07132655}
+.hero-card h3{margin:0 0 5px}.hero-card p{color:var(--muted);font-size:.9rem;margin:0 0 16px}
+.metric{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)}.metric strong{font-variant-numeric:tabular-nums}
+main{max-width:1120px;margin:auto;padding:44px 20px 70px}
+.section-head{margin:0 0 22px}.section-head h2{font-size:1.9rem;letter-spacing:-.7px;margin:0 0 5px}.section-head p{color:var(--muted);margin:0}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.tool{background:white;border:1px solid var(--line);padding:22px;border-radius:16px}.tool .ico{font-size:1.5rem}.tool h3{margin:9px 0 4px}.tool p{color:var(--muted);font-size:.92rem;margin:0}
+.calculator{display:grid;grid-template-columns:1fr .85fr;gap:22px;background:white;border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:46px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-size:.85rem;font-weight:700;margin-bottom:5px}.field input,.field select{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:12px;font:inherit;background:#fff}
+.result{background:var(--navy);color:white;border-radius:14px;padding:23px;display:flex;flex-direction:column;justify-content:center}.result small{color:#c4d4e7}.profit{font-size:2.6rem;font-weight:850;color:#75e3ba;letter-spacing:-1px}.result-row{display:flex;justify-content:space-between;border-top:1px solid #ffffff25;padding:9px 0;color:#dce7f3;font-size:.9rem}
+.note{font-size:.8rem;color:var(--muted);margin-top:13px}
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.guide{background:white;border:1px solid var(--line);padding:20px;border-radius:15px}.guide h3{margin:5px 0}.guide p{color:var(--muted);font-size:.9rem}
+.cta{margin-top:44px;background:#e6f8f1;border:1px solid #bcebd8;padding:26px;border-radius:16px}
+footer{background:var(--navy);color:#c8d5e5;padding:28px max(5vw,20px);font-size:.88rem}footer .foot{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){nav a{display:none}.hero-inner,.calculator{grid-template-columns:1fr}.tools,.guides{grid-template-columns:1fr}.hero{padding-top:48px}.fields{grid-template-columns:1fr 1fr}}
+
+.amazon-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;margin:34px 0;box-shadow:0 8px 28px #14213a0a}
+.amazon-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.amazon-results{background:var(--navy);color:#fff;border-radius:14px;padding:20px;margin-top:18px}
+.amazon-results .profit{font-size:2rem;font-weight:850;color:#75e3ba;margin:4px 0 12px}
+.amazon-results .result-row{border-top:1px solid #ffffff25;padding:8px 0;display:flex;justify-content:space-between;gap:12px}
+.amazon-note{font-size:.88rem;color:var(--muted);background:#f5f8fc;border-left:3px solid var(--green);padding:12px 14px;border-radius:8px;margin-top:16px}
+@media(max-width:760px){.amazon-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header><div class="brand"><span class="logo">P</span><span>ProfitPilot USA</span></div><nav><a href="#tools" data-en="Free tools" data-es="Herramientas">Free tools</a><a href="#calculator" data-en="Calculator" data-es="Calculadora">Calculator</a><a href="#amazon-calculator" data-en="Amazon" data-es="Amazon">Amazon</a><a href="#guides" data-en="Guides" data-es="Guías">Guides</a><button class="lang" id="language">ESPAÑOL</button></nav></header>
+<section class="hero"><div class="hero-inner">
+<div><div class="eyebrow" data-en="Free tools for ambitious sellers" data-es="Herramientas gratis para vendedores ambiciosos">Free tools for ambitious sellers</div>
+<h1 data-en="Your business. Your numbers. Your growth." data-es="Tu negocio. Tus números. Tu crecimiento.">Your business. Your numbers. Your growth.</h1>
+<p data-en="Make smarter selling decisions with simple calculators, practical guides and product research tools built for small businesses in the USA." data-es="Toma mejores decisiones de venta con calculadoras sencillas, guías prácticas y herramientas de investigación de productos para pequeños negocios en Estados Unidos.">Make smarter selling decisions with simple calculators, practical guides and product research tools built for small businesses in the USA.</p>
+<a class="btn" href="#calculator" data-en="Calculate my profit →" data-es="Calcular mi ganancia →">Calculate my profit →</a></div>
+<div class="hero-card"><h3 data-en="Know your numbers before you sell" data-es="Conoce tus números antes de vender">Know your numbers before you sell</h3><p data-en="A quick example using editable assumptions." data-es="Un ejemplo rápido con supuestos editables.">A quick example using editable assumptions.</p><div class="metric"><span data-en="Selling price" data-es="Precio de venta">Selling price</span><strong>$35.00</strong></div><div class="metric"><span data-en="Product + estimated costs" data-es="Producto + costos estimados">Product + estimated costs</span><strong>$23.00</strong></div><div class="metric"><span data-en="Estimated profit" data-es="Ganancia estimada">Estimated profit</span><strong style="color:#16834c">$12.00</strong></div></div>
+</div></section>
+<main>
+<section id="tools"><div class="section-head"><h2 data-en="Tools to move your business forward" data-es="Herramientas para impulsar tu negocio">Tools to move your business forward</h2><p data-en="Use free, practical tools to estimate your selling costs." data-es="Usa herramientas prácticas y gratuitas para estimar tus costos de venta.">Use free, practical tools to estimate your selling costs.</p></div>
+<div class="tools"><article class="tool"><div class="ico">🧮</div><h3 data-en="Reseller profit calculator" data-es="Calculadora de ganancias">Reseller profit calculator</h3><p data-en="Estimate your profit after product cost, fees and shipping." data-es="Estima tu ganancia después del costo del producto, comisiones y envío.">Estimate your profit after product cost, fees and shipping.</p></article>
+<article class="tool"><div class="ico">🛒</div><h3 data-en="Amazon profit calculator" data-es="Calculadora de ganancias de Amazon">Amazon profit calculator</h3><p data-en="Estimate Amazon fees, fulfillment costs and net profit." data-es="Estima comisiones de Amazon, logística y ganancia neta.">Estimate Amazon fees, fulfillment costs and net profit.</p><a class="btn" href="#amazon-calculator" data-en="Open calculator →" data-es="Abrir calculadora →">Open calculator →</a></article>
+<article class="tool"><div class="ico">🔎</div><h3 data-en="Product research" data-es="Investigación de productos">Product research</h3><p data-en="Learn how to evaluate demand, competition and margins." data-es="Aprende a evaluar demanda, competencia y márgenes.">Learn how to evaluate demand, competition and margins.</p></article></div></section>
+<section id="calculator"><div class="section-head"><h2 data-en="Free reseller profit calculator" data-es="Calculadora gratuita de ganancias">Free reseller profit calculator</h2><p data-en="Enter your own numbers. This is an estimate, not a marketplace fee quote." data-es="Introduce tus propios números. Es una estimación, no una cotización oficial de comisiones.">Enter your own numbers. This is an estimate, not a marketplace fee quote.</p></div>
+<div class="calculator"><div class="fields">
+<div class="field"><label for="sale" data-en="Selling price ($)" data-es="Precio de venta ($)">Selling price ($)</label><input id="sale" type="number" min="0" step=".01" value="35"></div>
+<div class="field"><label for="cost" data-en="Product cost ($)" data-es="Costo del producto ($)">Product cost ($)</label><input id="cost" type="number" min="0" step=".01" value="15"></div>
+<div class="field"><label for="fee" data-en="Marketplace fee (%)" data-es="Comisión de plataforma (%)">Marketplace fee (%)</label><input id="fee" type="number" min="0" max="100" step=".1" value="12"></div>
+<div class="field"><label for="ship" data-en="Shipping / other costs ($)" data-es="Envío / otros costos ($)">Shipping / other costs ($)</label><input id="ship" type="number" min="0" step=".01" value="5"></div>
+</div><div class="result"><small data-en="Estimated net profit" data-es="Ganancia neta estimada">Estimated net profit</small><div class="profit" id="profit">$10.80</div><div class="result-row"><span data-en="Marketplace fee" data-es="Comisión de plataforma">Marketplace fee</span><strong id="feeValue">$4.20</strong></div><div class="result-row"><span data-en="Profit margin" data-es="Margen de ganancia">Profit margin</span><strong id="margin">30.9%</strong></div><div class="result-row"><span data-en="Total costs" data-es="Costos totales">Total costs</span><strong id="total">$24.20</strong></div><button style="margin-top:14px" id="reset" data-en="Reset example" data-es="Restablecer ejemplo">Reset example</button></div></div><p class="note" data-en="Important: Marketplace fees vary by category, plan, fulfillment method and current policies. Enter the correct fee for your listing. Taxes, returns, storage, advertising and other costs may change actual profit." data-es="Importante: las comisiones varían según categoría, plan, método de logística y políticas vigentes. Introduce la comisión correcta. Impuestos, devoluciones, almacenamiento, publicidad y otros costos pueden cambiar la ganancia real.">Important: Marketplace fees vary by category, plan, fulfillment method and current policies. Enter the correct fee for your listing. Taxes, returns, storage, advertising and other costs may change actual profit.</p></section>
+
+<section id="amazon-calculator" class="amazon-box">
+<div class="section-head"><h2 data-en="Amazon profit calculator" data-es="Calculadora de ganancias de Amazon">Amazon profit calculator</h2><p data-en="Estimate profit per unit with category-based referral fees and your fulfillment costs." data-es="Estima la ganancia por unidad con comisiones según la categoría y tus costos de logística.">Estimate profit per unit with category-based referral fees and your fulfillment costs.</p></div>
+<div class="amazon-grid">
+<div class="field"><label for="am-sale" data-en="Item selling price ($)" data-es="Precio de venta del artículo ($)">Item selling price ($)</label><input id="am-sale" type="number" min="0" step=".01" value="29.99"></div>
+<div class="field"><label for="am-customer-ship" data-en="Shipping charged to customer ($)" data-es="Envío cobrado al cliente ($)">Shipping charged to customer ($)</label><input id="am-customer-ship" type="number" min="0" step=".01" value="0"></div>
+<div class="field"><label for="am-gift" data-en="Gift wrap / other customer charges ($)" data-es="Envoltura de regalo / otros cargos al cliente ($)">Gift wrap / other customer charges ($)</label><input id="am-gift" type="number" min="0" step=".01" value="0"></div>
+<div class="field"><label for="am-cost" data-en="Product purchase cost ($)" data-es="Costo de compra del producto ($)">Product purchase cost ($)</label><input id="am-cost" type="number" min="0" step=".01" value="8"></div>
+<div class="field"><label for="am-category" data-en="Amazon fee category" data-es="Categoría de tarifas de Amazon">Amazon fee category</label><select id="am-category">
+<option value="home" selected data-en="Home & Kitchen — 15%" data-es="Hogar y cocina — 15%">Home & Kitchen — 15%</option>
+<option value="automotive" data-en="Automotive — 12%" data-es="Automotriz — 12%">Automotive — 12%</option>
+<option value="beauty" data-en="Beauty / Health — 8% up to $10; then 15%" data-es="Belleza / salud — 8% hasta $10; luego 15%">Beauty / Health — 8% up to $10; then 15%</option>
+<option value="baby" data-en="Baby — 8% up to $10; then 15%" data-es="Bebés — 8% hasta $10; luego 15%">Baby — 8% up to $10; then 15%</option>
+<option value="clothing" data-en="Clothing — 5% / 10% / 17% tiers" data-es="Ropa — tramos de 5% / 10% / 17%">Clothing — 5% / 10% / 17% tiers</option>
+<option value="computers" data-en="Computers — 8%" data-es="Computadoras — 8%">Computers — 8%</option>
+<option value="electronics" data-en="Consumer Electronics — 8%" data-es="Electrónica de consumo — 8%">Consumer Electronics — 8%</option>
+<option value="electronics-accessories" data-en="Electronics Accessories — 15% up to $100; then 8%" data-es="Accesorios electrónicos — 15% hasta $100; luego 8%">Electronics Accessories — 15% up to $100; then 8%</option>
+<option value="grocery" data-en="Grocery — 8% up to $15; then 15%" data-es="Comestibles — 8% hasta $15; luego 15%">Grocery — 8% up to $15; then 15%</option>
+<option value="office" data-en="Office Products — 15%" data-es="Productos de oficina — 15%">Office Products — 15%</option>
+<option value="pet" data-en="Pet Supplies — 15%" data-es="Suministros para mascotas — 15%">Pet Supplies — 15%</option>
+<option value="sports" data-en="Sports & Outdoors — 15%" data-es="Deportes y aire libre — 15%">Sports & Outdoors — 15%</option>
+<option value="toys" data-en="Toys & Games — 15%" data-es="Juguetes y juegos — 15%">Toys & Games — 15%</option>
+<option value="tools" data-en="Tools & Home Improvement — 15%" data-es="Herramientas y mejoras del hogar — 15%">Tools & Home Improvement — 15%</option>
+<option value="3d" data-en="3D Printers — 12% up to $200; then 5%" data-es="Impresoras 3D — 12% hasta $200; luego 5%">3D Printers — 12% up to $200; then 5%</option>
+<option value="compact-appliances" data-en="Compact Appliances — 15% up to $300; then 8%" data-es="Electrodomésticos compactos — 15% hasta $300; luego 8%">Compact Appliances — 15% up to $300; then 8%</option>
+<option value="full-appliances" data-en="Full-size Appliances — 8%" data-es="Electrodomésticos grandes — 8%">Full-size Appliances — 8%</option>
+<option value="furniture" data-en="Furniture — 15% up to $200; then 10%" data-es="Muebles — 15% hasta $200; luego 10%">Furniture — 15% up to $200; then 10%</option>
+<option value="jewelry" data-en="Jewelry — 20% up to $250; then 5%" data-es="Joyería — 20% hasta $250; luego 5%">Jewelry — 20% up to $250; then 5%</option>
+<option value="manual" data-en="Other / manual rate" data-es="Otra categoría / tarifa manual">Other / manual rate</option>
+</select></div>
+<div class="field"><label for="am-ref" data-en="Custom referral rate (%) — manual category only" data-es="Comisión personalizada (%) — solo categoría manual">Custom referral rate (%) — manual category only</label><input id="am-ref" type="number" min="0" max="100" step=".1" value="15" disabled></div>
+<div class="field"><label for="am-min" data-en="Minimum referral fee ($)" data-es="Comisión mínima por referencia ($)">Minimum referral fee ($)</label><input id="am-min" type="number" min="0" step=".01" value="0.30"></div>
+<div class="field"><label for="am-plan" data-en="Selling plan" data-es="Plan de vendedor">Selling plan</label><select id="am-plan"><option value="individual" data-en="Individual — $0.99 per item" data-es="Individual — $0.99 por artículo">Individual — $0.99 per item</option><option value="professional" data-en="Professional — $39.99 per month" data-es="Professional — $39.99 al mes">Professional — $39.99 per month</option></select></div>
+<div class="field"><label for="am-volume" data-en="Expected units sold per month" data-es="Unidades que esperas vender al mes">Expected units sold per month</label><input id="am-volume" type="number" min="1" step="1" value="40"></div>
+<div class="field"><label for="am-fulfillment" data-en="Fulfillment method" data-es="Método de logística">Fulfillment method</label><select id="am-fulfillment"><option value="fba" data-en="FBA — Amazon ships it" data-es="FBA — Amazon realiza el envío">FBA — Amazon ships it</option><option value="fbm" data-en="FBM — I ship it myself" data-es="FBM — Yo mismo realizo el envío">FBM — I ship it myself</option></select></div>
+<div class="field" id="am-fba-wrap"><label for="am-fba" data-en="FBA fulfillment fee per unit ($) — example only; replace with Amazon's current estimate" data-es="Tarifa de logística FBA por unidad ($) — ejemplo; reemplázala con la estimación actual de Amazon">FBA fulfillment fee per unit ($) — example only; replace with Amazon's current estimate</label><input id="am-fba" type="number" min="0" step=".01" value="4.50"></div>
+<div class="field" id="am-ship-wrap" hidden><label for="am-ship" data-en="Your shipping cost per unit ($)" data-es="Tu costo de envío por unidad ($)">Your shipping cost per unit ($)</label><input id="am-ship" type="number" min="0" step=".01" value="5"></div>
+<div class="field" id="am-fba-surcharge-wrap"><label for="am-fba-surcharge" data-en="Extra FBA fuel/logistics surcharge (%) — only if not included above" data-es="Recargo adicional FBA por combustible/logística (%) — solo si no está incluido arriba">Extra FBA fuel/logistics surcharge (%) — only if not included above</label><input id="am-fba-surcharge" type="number" min="0" max="100" step=".1" value="0"></div>
+<div class="field"><label for="am-inbound" data-en="Inbound shipping / prep per unit ($)" data-es="Envío a Amazon / preparación por unidad ($)">Inbound shipping / prep per unit ($)</label><input id="am-inbound" type="number" min="0" step=".01" value="0.50"></div>
+<div class="field"><label for="am-storage" data-en="Storage / other Amazon costs per unit ($)" data-es="Almacenamiento / otros costos de Amazon por unidad ($)">Storage / other Amazon costs per unit ($)</label><input id="am-storage" type="number" min="0" step=".01" value="0.25"></div>
+<div class="field"><label for="am-ads" data-en="Advertising / other variable costs per unit ($)" data-es="Publicidad / otros costos variables por unidad ($)">Advertising / other variable costs per unit ($)</label><input id="am-ads" type="number" min="0" step=".01" value="0"></div>
+<div class="field"><label for="am-return" data-en="Returns / refund reserve per unit ($)" data-es="Reserva para devoluciones/reembolsos por unidad ($)">Returns / refund reserve per unit ($)</label><input id="am-return" type="number" min="0" step=".01" value="0"></div>
+</div>
+<div class="amazon-results"><small data-en="Estimated net profit per unit" data-es="Ganancia neta estimada por unidad">Estimated net profit per unit</small><div class="profit" id="am-profit">$11.25</div><div class="result-row"><span data-en="Referral fee" data-es="Comisión por referencia">Referral fee</span><strong id="am-ref-value">$4.50</strong></div><div class="result-row"><span data-en="Selling plan cost per unit" data-es="Costo del plan por unidad">Selling plan cost per unit</span><strong id="am-plan-value">$0.99</strong></div><div class="result-row"><span data-en="Fulfillment / shipping" data-es="Logística / envío">Fulfillment / shipping</span><strong id="am-fulfill-value">$4.50</strong></div><div class="result-row"><span data-en="Extra FBA surcharge" data-es="Recargo FBA adicional">Extra FBA surcharge</span><strong id="am-surcharge-value">$0.00</strong></div><div class="result-row"><span data-en="All estimated costs" data-es="Todos los costos estimados">All estimated costs</span><strong id="am-total">$18.74</strong></div><div class="result-row"><span data-en="Profit margin" data-es="Margen de ganancia">Profit margin</span><strong id="am-margin">37.5%</strong></div><button style="margin-top:14px" id="am-reset" data-en="Reset example" data-es="Restablecer ejemplo">Reset example</button></div>
+<p class="amazon-note" data-en="Important: this is an independent estimate, not an Amazon quote. Referral fees vary by Amazon fee category and may have a minimum. The menu covers common categories only; use Other/manual for categories not listed and verify the exact rate. Amazon generally calculates the referral fee on the total sales price, including shipping charged to the buyer and gift-wrap charges. The category used for fees may differ from the category shoppers see. FBA fees depend on packed dimensions, shipping weight, category, price and season. As of Nov. 16, 2026, Amazon states that a 3.5% fuel/logistics surcharge applies to FBA fulfillment fees and holiday peak fees run Oct. 15, 2026–Jan. 14, 2027. Its Revenue Calculator reflects current peak rates and surcharge. If you copy the current FBA fee from that calculator, leave the extra surcharge above at 0 to avoid double counting. Enter other costs where relevant; taxes and costs you omit are not included." data-es="Importante: esta es una estimación independiente, no una cotización de Amazon. Las comisiones por referencia varían según la categoría de tarifas de Amazon y pueden tener un mínimo. El menú incluye solo categorías comunes; usa Otra categoría/manual para las que no aparecen y verifica la tarifa exacta. Amazon generalmente calcula la comisión sobre el precio total de venta, incluidos el envío cobrado al comprador y los cargos por envoltura de regalo. La categoría usada para las tarifas puede ser distinta de la categoría que ven los compradores. Las tarifas FBA dependen de las dimensiones del paquete, peso de envío, categoría, precio y temporada. Al 16 de noviembre de 2026, Amazon indica que se aplica un recargo de 3.5% por combustible/logística a las tarifas FBA y que las tarifas de temporada alta rigen del 15 de octubre de 2026 al 14 de enero de 2027. Su Calculadora de ingresos refleja las tarifas de temporada alta y el recargo actuales. Si copias la tarifa FBA actual de esa calculadora, deja el recargo adicional en 0 para no contarlo dos veces. Introduce los demás costos que correspondan; los impuestos y costos que omitas no se incluyen.">Important: this is an independent estimate, not an Amazon quote. Referral fees vary by Amazon fee category and may have a minimum. The menu covers common categories only; use Other/manual for categories not listed and verify the exact rate. Amazon generally calculates the referral fee on the total sales price, including shipping charged to the buyer and gift-wrap charges. The category used for fees may differ from the category shoppers see. FBA fees depend on packed dimensions, shipping weight, category, price and season. As of Nov. 16, 2026, Amazon states that a 3.5% fuel/logistics surcharge applies to FBA fulfillment fees and holiday peak fees run Oct. 15, 2026–Jan. 14, 2027. Its Revenue Calculator reflects current peak rates and surcharge. If you copy the current FBA fee from that calculator, leave the extra surcharge above at 0 to avoid double counting. Enter other costs where relevant; taxes and costs you omit are not included.</p>
+<p><a href="https://sellercentral.amazon.com/revcalpublic?ref_=sdus_pri_xscus_rc2" target="_blank" rel="noopener" data-en="Open Amazon's official Revenue Calculator ↗" data-es="Abrir la Calculadora oficial de ingresos de Amazon ↗">Open Amazon's official Revenue Calculator ↗</a> · <a href="https://sell.amazon.com/pricing" target="_blank" rel="noopener" data-en="Check Amazon selling plans and referral fees ↗" data-es="Consultar planes y comisiones de venta de Amazon ↗">Check Amazon selling plans and referral fees ↗</a> · <a href="https://sellercentral.amazon.com/help/hub/reference/external/GPDC3KPYAGDTVDJP?locale=en_US" target="_blank" rel="noopener" data-en="Review FBA fulfillment fees ↗" data-es="Consultar tarifas de logística FBA ↗">Review FBA fulfillment fees ↗</a></p>
+</section>
+<section id="guides"><div class="section-head"><h2 data-en="Learn the fundamentals" data-es="Aprende lo fundamental">Learn the fundamentals</h2><p data-en="Starter topics for building a more informed resale business." data-es="Temas iniciales para construir un negocio de reventa con mejores decisiones.">Starter topics for building a more informed resale business.</p></div>
+<div class="guides"><article class="guide"><span>01 · START</span><h3 data-en="How to calculate product profit" data-es="Cómo calcular la ganancia de un producto">How to calculate product profit</h3><p data-en="Include every cost before deciding whether an item is worth selling." data-es="Incluye todos los costos antes de decidir si vale la pena vender un artículo.">Include every cost before deciding whether an item is worth selling.</p></article><article class="guide"><span>02 · RESEARCH</span><h3 data-en="How to research product demand" data-es="Cómo investigar la demanda de un producto">How to research product demand</h3><p data-en="Check competition, pricing and demand signals before buying inventory." data-es="Revisa competencia, precios y señales de demanda antes de comprar inventario.">Check competition, pricing and demand signals before buying inventory.</p></article><article class="guide"><span>03 · SELL</span><h3 data-en="Choosing a marketplace" data-es="Cómo elegir una plataforma de venta">Choosing a marketplace</h3><p data-en="Compare audiences, fees, shipping and seller requirements." data-es="Compara público, comisiones, envíos y requisitos para vendedores.">Compare audiences, fees, shipping and seller requirements.</p></article></div></section>
+<div class="cta"><h2 data-en="Build your business with better information." data-es="Construye tu negocio con mejor información.">Build your business with better information.</h2><p data-en="ProfitPilot USA is an independent educational project. We are not affiliated with Amazon, eBay or Walmart." data-es="ProfitPilot USA es un proyecto educativo independiente. No estamos afiliados con Amazon, eBay ni Walmart.">ProfitPilot USA is an independent educational project. We are not affiliated with Amazon, eBay or Walmart.</p></div>
+</main><footer><div class="foot"><strong>ProfitPilot USA © 2026</strong><span data-en="Independent educational tools · Estimates only" data-es="Herramientas educativas independientes · Solo estimaciones">Independent educational tools · Estimates only</span><span>Privacy · Terms · Contact (to be added)</span></div></footer>
+<script>
+const ids=['sale','cost','fee','ship'];const $=id=>document.getElementById(id);
+function calc(){let sale=Math.max(0,+$('sale').value||0),cost=Math.max(0,+$('cost').value||0),pct=Math.min(100,Math.max(0,+$('fee').value||0)),ship=Math.max(0,+$('ship').value||0),fee=sale*pct/100,total=cost+fee+ship,profit=sale-total,margin=sale?profit/sale*100:0; $('profit').textContent=profit.toLocaleString('en-US',{style:'currency',currency:'USD'});$('feeValue').textContent=fee.toLocaleString('en-US',{style:'currency',currency:'USD'});$('total').textContent=total.toLocaleString('en-US',{style:'currency',currency:'USD'});$('margin').textContent=margin.toFixed(1)+'%';$('profit').style.color=profit>=0?'#75e3ba':'#ff9b9b'}
+ids.forEach(id=>$(id).addEventListener('input',calc));$('reset').addEventListener('click',()=>{['35','15','12','5'].forEach((v,i)=>$(ids[i]).value=v);calc()});
+let lang='en';$('language').addEventListener('click',()=>{lang=lang==='en'?'es':'en';document.documentElement.lang=lang;document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);$('language').textContent=lang==='en'?'ESPAÑOL':'ENGLISH';calc();amCalc();});
+
+const amIds=['am-sale','am-customer-ship','am-gift','am-cost','am-ref','am-min','am-volume','am-fba','am-ship','am-fba-surcharge','am-inbound','am-storage','am-ads','am-return'];
+function amNum(id){return Math.max(0,Number($(id).value)||0)}
+function amMoney(n){return n.toLocaleString(lang==='es'?'es-US':'en-US',{style:'currency',currency:'USD'})}
+function amCategoryDefaults(){
+ const category=$('am-category').value;
+ $('am-ref').disabled=category!=='manual';
+ $('am-min').value=category==='grocery'?'0':'0.30';
+ const rates={home:15,automotive:12,computers:8,electronics:8,office:15,pet:15,sports:15,toys:15,tools:15,'full-appliances':8,manual:15};
+ $('am-ref').value=rates[category]??15;
+}
+function amReferralAmount(total, category){
+ const pct=amNum('am-ref');
+ switch(category){
+  case 'beauty': case 'baby': return total<=10?total*.08:total*.15;
+  case 'clothing': return total<=15?total*.05:(total<=20?total*.10:total*.17);
+  case 'electronics-accessories': return Math.min(total,100)*.15+Math.max(0,total-100)*.08;
+  case 'grocery': return total<=15?total*.08:total*.15;
+  case '3d': return Math.min(total,200)*.12+Math.max(0,total-200)*.05;
+  case 'compact-appliances': return Math.min(total,300)*.15+Math.max(0,total-300)*.08;
+  case 'furniture': return Math.min(total,200)*.15+Math.max(0,total-200)*.10;
+  case 'jewelry': return Math.min(total,250)*.20+Math.max(0,total-250)*.05;
+  case 'manual': return total*pct/100;
+  default: return total*(pct||15)/100;
+ }
+}
+function amCalc(){
+ const sale=amNum('am-sale'), customerShip=amNum('am-customer-ship'), gift=amNum('am-gift');
+ const revenue=sale+customerShip+gift, cost=amNum('am-cost'), category=$('am-category').value;
+ const referral=Math.max(amReferralAmount(revenue,category),amNum('am-min'));
+ const plan=$('am-plan').value==='individual'?.99:(39.99/Math.max(1,amNum('am-volume')));
+ const fba=$('am-fulfillment').value==='fba';
+ $('am-fba-wrap').hidden=!fba; $('am-ship-wrap').hidden=fba; $('am-fba-surcharge-wrap').hidden=!fba;
+ const fulfillment=fba?amNum('am-fba'):amNum('am-ship');
+ const surcharge=fba?fulfillment*amNum('am-fba-surcharge')/100:0;
+ const extras=amNum('am-inbound')+amNum('am-storage')+amNum('am-ads')+amNum('am-return');
+ const total=cost+referral+plan+fulfillment+surcharge+extras, profit=revenue-total, margin=revenue?profit/revenue*100:0;
+ $('am-profit').textContent=amMoney(profit); $('am-profit').style.color=profit>=0?'#75e3ba':'#ff9b9b';
+ $('am-ref-value').textContent=amMoney(referral); $('am-plan-value').textContent=amMoney(plan); $('am-fulfill-value').textContent=amMoney(fulfillment); $('am-surcharge-value').textContent=amMoney(surcharge); $('am-total').textContent=amMoney(total); $('am-margin').textContent=margin.toFixed(1)+'%';
+}
+amCategoryDefaults();
+amIds.forEach(id=>$(id).addEventListener('input',amCalc));
+$('am-category').addEventListener('change',()=>{amCategoryDefaults();amCalc()});
+['am-plan','am-fulfillment'].forEach(id=>$(id).addEventListener('change',amCalc));
+$('am-reset').addEventListener('click',()=>{
+ const vals={'am-sale':'29.99','am-customer-ship':'0','am-gift':'0','am-cost':'8','am-ref':'15','am-min':'0.30','am-volume':'40','am-fba':'4.50','am-ship':'5','am-fba-surcharge':'0','am-inbound':'0.50','am-storage':'0.25','am-ads':'0','am-return':'0'};
+ Object.entries(vals).forEach(([id,value])=>$(id).value=value);
+ $('am-category').value='home'; $('am-plan').value='individual'; $('am-fulfillment').value='fba'; amCategoryDefaults(); amCalc();
+});
+
+calc();amCalc();
+</script>
+</body></html>
